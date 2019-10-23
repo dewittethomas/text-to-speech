@@ -16,14 +16,13 @@ pip install text-to-speech
 ### Speak
 
 ```python
-speak("text", "language")
+speak("text", "ISO 639-1 Code")
 ```
-You have to put a ISO 639-1 Code in the language
 
 Demo:
 
 ```python
 import text_to_speech as speech
 
-speech.speak("text")
+speech.speak("text", "ISO 639-1 Code")
 ```
