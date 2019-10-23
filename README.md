@@ -1,11 +1,14 @@
 # text-to-speech
+
+[![npm](https://img.shields.io/pypi/v/text-to-speech.svg)](https://pypi.org/project/text-to-speech/)
+
 A python package that says something of your choice
 
 ## Installation
 To install the package run this command:
 
 ```bash
-  pip install text-to-speech
+pip install text-to-speech
 ```
 
 ## Usage
@@ -13,8 +16,9 @@ To install the package run this command:
 ### Speak
 
 ```python
-speak("text")
+speak("text", "language")
 ```
+You have to put a ISO 639-1 Code in the language
 
 Demo:
 
