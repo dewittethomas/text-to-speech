@@ -8,7 +8,7 @@ setuptools.setup(
     author_email="thomasdewittecontact@gmail.com",
 
     name='text_to_speech',
-    version='1.0.8',
+    version='1.0.9',
     license="MIT",
     url='https://github.com/dewittethomas/text-to-speech',
     python_requires='>= 2.7',
@@ -25,7 +25,7 @@ setuptools.setup(
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'License :: OSI Approved :: MIT License',
-        'Operating System :: Microsoft :: Windows',
+        'Operating System :: OS Independent',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3.0',
         'Programming Language :: Python :: 3.1',
