@@ -18,5 +18,5 @@ pip install text-to-speech
 ```python
 import text_to_speech as speech
 
-speech.speak("text", "ISO 639-1 Code")
+speech.speak("Hello", "en")
 ```
