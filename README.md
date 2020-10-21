@@ -18,5 +18,8 @@ pip install text-to-speech
 ```python
 import text_to_speech as speech
 
-speech.speak("Hello", "en")
+speech.speak("Hello", lang="en")
 ```
+
+<text> is the text,
+and <lang> is an IETF language tag such as en or pt-br.

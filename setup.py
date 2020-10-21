@@ -8,7 +8,7 @@ setuptools.setup(
     author_email="thomasdewittecontact@gmail.com",
 
     name='text_to_speech',
-    version='1.2.3',
+    version='1.2.4',
     license="MIT",
     url='https://github.com/dewittethomas/text-to-speech',
     python_requires='>= 3.5',

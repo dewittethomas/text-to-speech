@@ -23,4 +23,3 @@ def speak(text, lang):
     time.sleep(length)
 
     os.remove(file)
-
