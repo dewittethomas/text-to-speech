@@ -8,7 +8,7 @@ setuptools.setup(
     author_email="thomasdewittecontact@gmail.com",
 
     name='text_to_speech',
-    version='1.3.0',
+    version='1.3.1',
     license="MIT",
     url='https://github.com/dewittethomas/text-to-speech',
     python_requires='>= 3.5',
@@ -18,7 +18,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
 
     package_dir={"text_to_speech": "text_to_speech"},
-    install_requires=["playsound>=1.2.2", "gTTS>=2.0.4", "mutagen>=1.44.0"],
+    install_requires=["playsound>=1.2.2", "gTTS>=2.0.4"],
     
     packages=setuptools.find_packages(),
 
