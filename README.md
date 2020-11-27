@@ -20,7 +20,7 @@ Write ‘hello’ in English
 ```python
 from text_to_speech import speak 
 
-speak("hello", lang="en")
+speak("hello")
 ```
 
 Write ‘bonjour’ in French
@@ -31,7 +31,6 @@ from text_to_speech import speak
 speak("bonjour", lang="fr")
 ```
 
-
 Write ‘hello’ in English slow
 
 ```python
@@ -40,4 +39,19 @@ from text_to_speech import speak
 speak("hello", lang="en", slow=True)
 ```
 
-"text" is the text, and "lang" is an IETF language tag such as en or pt-br, "slow" is the option if it has to be read slow or not.
+Write ‘hello’ in English and save the file as "speech.mp3"
+```python
+from text_to_speech import speak 
+
+speak("hello", lang="en", save=True)
+```
+
+Write ‘hello’ in English and save the file as "hello.mp3"
+```python
+from text_to_speech import speak 
+
+speak("hello", lang="en", save=True, file="hello.mp3")
+```
+
+
+"text" is the text, and "lang" is an IETF language tag such as en or pt-br, "slow" is the option if it has to be read slow or not, "save" is if it has to be saved or not by default it is saved as "speech.mp3", "file" is if "save" = True you could choose a specific path or filename.
