@@ -1,17 +1,20 @@
 import os
 from gtts import gTTS
 from playsound import playsound
+from datetime import datetime
 
 def play(file):
     playsound(file, True)
 
 def speak(text, lang = "en", slow = False, save = False, file = ""):
+    dt = datetime.now().strftime("%d%m%Y%H%M%S")
+
     if save == True and file != "":
         file = file
     elif save == True and file == "":
-        file = "speech.mp3"
+        file = f"speech{dt}.mp3"
     elif save == False:
-        file = "speech.mp3"
+        file = f"speech{dt}.mp3"
     else:
         raise ValueError(f"'{file}' is not defined")
     
