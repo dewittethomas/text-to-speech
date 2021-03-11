@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name = "text_to_speech",
-    version = "1.5.0",
+    version = "1.5.1",
     license = "MIT",
     url = "https://github.com/dewittethomas/text-to-speech",
     
@@ -29,5 +29,5 @@ setup(
         "License :: OSI Approved :: MIT License",
     ],
 
-    keywords = 'sound playsound music wave wav mp3 media song play audio'
+    keywords = "sound playsound music wave wav mp3 media song play audio"
 )
