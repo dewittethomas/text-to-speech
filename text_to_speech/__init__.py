@@ -1,3 +1,1 @@
-from .text_to_speech import (
-  speak
-)
+from .text_to_speech import speak

@@ -2,12 +2,13 @@
 
 [![npm](https://img.shields.io/pypi/v/text-to-speech.svg)](https://pypi.org/project/text-to-speech/)
 
-A simple text to speech engine
+This is a simple text to speech engine with some customizable options.
 
 ## Installation
-To install the package run this command:
 
-```bash
+Run the following to install:
+
+```console
 pip install text-to-speech
 ```
 
@@ -15,43 +16,27 @@ pip install text-to-speech
 
 ### Speak
 
-Write ‘hello’ in English
-
 ```python
-from text_to_speech import speak 
-
-speak("hello")
+speak()
 ```
 
-Write ‘bonjour’ in French
+Params:
 
-```python
-from text_to_speech import speak 
-
-speak("bonjour", lang="fr")
+```
+Text: String ? The text to be read.
+Language: String ? The language (IETF language tag) to read the text in.
+Slow: Boolean ? Reads text more slowly.
+Save: Boolean ? If the file has to be saved as "file.mp3" or not.
+File: String ? If save == true, the file name to save the mp3 to.
 ```
 
-Write ‘hello’ in English slow
+Demo:
 
 ```python
-from text_to_speech import speak 
+from text_to_speech import speak
 
-speak("hello", lang="en", slow=True)
+speak("Hello World", "en", save=True, file="Hello-World.mp3")
 ```
 
-Write ‘hello’ in English and save the file as "speech.mp3"
-```python
-from text_to_speech import speak 
-
-speak("hello", lang="en", save=True)
-```
-
-Write ‘hello’ in English and save the file as "hello.mp3"
-```python
-from text_to_speech import speak 
-
-speak("hello", lang="en", save=True, file="hello.mp3")
-```
-
-
-"text" is the text, and "lang" is an IETF language tag such as en or pt-br, "slow" is the option if it has to be read slow or not, "save" is if it has to be saved or not by default it is saved as "speech.mp3", "file" is if "save" = True you could choose a specific path or filename.
+# License
+[MIT](https://github.com/dewittethomas/text-to-speech/blob/master/LICENSE)

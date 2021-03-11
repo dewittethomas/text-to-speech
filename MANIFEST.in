@@ -1,0 +1,2 @@
+include LICENSE
+recursive-include text_to_speech *.py

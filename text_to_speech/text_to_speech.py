@@ -3,8 +3,8 @@ from gtts import gTTS
 from playsound import playsound
 from datetime import datetime
 
-def play(file):
-    playsound(file, True)
+def play(text):
+    playsound(text, True)
 
 def speak(text, lang = "en", slow = False, save = False, file = ""):
     dt = datetime.now().strftime("%d%m%Y%H%M%S")
@@ -14,16 +14,10 @@ def speak(text, lang = "en", slow = False, save = False, file = ""):
     elif save == True and file == "":
         file = f"speech{dt}.mp3"
     elif save == False:
-        file = f"speech{dt}.mp3"
+        path = f"C:\\Users\\{os.getlogin()}\\AppData\\Local\\Temp"
+        file = f"{path}\\speech{dt}.mp3"
     else:
         raise ValueError(f"'{file}' is not defined")
-    
-    if slow == True:
-        slow = True
-    elif slow ==  False:
-        slow = False
-    else:
-        raise ValueError(f"'{slow}' is not defined")
     
     tts = gTTS(text=text, lang=lang, slow=slow)
 
@@ -39,4 +33,6 @@ def speak(text, lang = "en", slow = False, save = False, file = ""):
         else:
             raise ValueError(f"'{save}' is not defined")
     else:
-        raise ValueError(f"'{file}' is not a valid mp3 format")
+        raise ValueError(f"'{file}' is not a valid mp3-file format")
+
+speak("hello", "en")
