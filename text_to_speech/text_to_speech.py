@@ -34,5 +34,3 @@ def speak(text, lang = "en", slow = False, save = False, file = ""):
             raise ValueError(f"'{save}' is not defined")
     else:
         raise ValueError(f"'{file}' is not a valid mp3-file format")
-
-speak("hello", "en")
