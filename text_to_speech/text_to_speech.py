@@ -6,7 +6,7 @@ from datetime import datetime
 def play(text):
     playsound(text, True)
 
-def speak(text, lang = "en", slow = False, save = False, file = ""):
+def speak(text, lang = "en", slow = False, save = False, file = "", speak = True):
     dt = datetime.now().strftime("%d%m%Y%H%M%S")
 
     if save == True and file != "":
@@ -23,8 +23,9 @@ def speak(text, lang = "en", slow = False, save = False, file = ""):
 
     if os.path.splitext(file)[1] == ".mp3":
         tts.save(file)
-        
-        play(file)
+
+        if(speak == True):
+            play(file)
 
         if save == False:
             os.unlink(file)
