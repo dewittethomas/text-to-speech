@@ -5,7 +5,9 @@ with open("README.md", "r") as fh:
 
 setup(
     name = "text_to_speech",
-    version = "1.5.2",
+    version = "1.5.3",
+    author = "Thomas Dewitte",
+    author_email = "thomasdewittecontact@gmail.com",
     license = "MIT",
     url = "https://github.com/dewittethomas/text-to-speech",
     
