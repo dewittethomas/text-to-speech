@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name = "text_to_speech",
-    version = "1.5.3",
+    version = "1.6.0",
     author = "Thomas Dewitte",
     author_email = "thomasdewittecontact@gmail.com",
     license = "MIT",
@@ -17,17 +17,15 @@ setup(
 
     package_dir = {"text_to_speech": "text_to_speech"},
     install_requires = [
-        "playsound>=1.2.2", 
-        "gTTS>=2.0.4"
+        "gTTS>=2.3.1"
     ],
 
     packages = find_packages(),
 
     classifiers = [
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.6",
-        "Programming Language :: Python :: 3.7",
-        "Operating System :: Microsoft :: Windows",
+        "Programming Language :: Python :: 3.8",
+        "Operating System :: OS Independent",
         "License :: OSI Approved :: MIT License",
     ],
 

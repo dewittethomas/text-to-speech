@@ -14,10 +14,10 @@ pip install text-to-speech
 
 ## Usage
 
-### Speak
+### Save
 
 ```python
-speak()
+save()
 ```
 
 Params:
@@ -26,17 +26,16 @@ Params:
 Text: String ? The text to be read.
 Language: String ? The language (IETF language tag) to read the text in.
 Slow: Boolean ? Reads text more slowly.
-Save: Boolean ? If the file has to be saved or not.
-File: String ? If save == true, the file name to save the mp3 to.
-Speak: Boolean ? If the text has to be read out loud.
+File: String ? The file to save the text to, default is = "speech.mp3", only accepts .mp3.
+Lang_check: Boolean ? If the text has to be checked on language errors.
 ```
 
 Demo:
 
 ```python
-from text_to_speech import speak
+from text_to_speech import save
 
-speak("Hello World", "en", save=True, file="Hello-World.mp3", speak=True)
+save("Hello World", "en", file="Hello-World.mp3")
 ```
 
 # License

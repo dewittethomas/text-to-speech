@@ -1,37 +1,19 @@
-import os
 from gtts import gTTS
-from playsound import playsound
-from datetime import datetime
+import os.path
 
-def play(text):
-    playsound(text, True)
+def save(text, lang = "en", slow = False, lang_check = False, file = ""):
+    extension = extension = os.path.splitext(file)[1].lower()
+    ready = False
 
-def speak(text, lang = "en", slow = False, save = False, file = "", speak = True):
-    dt = datetime.now().strftime("%d%m%Y%H%M%S")
-
-    if save == True and file != "":
+    if file != "" and extension == ".mp3":
         file = file
-    elif save == True and file == "":
-        file = f"speech{dt}.mp3"
-    elif save == False:
-        path = f"C:\\Users\\{os.getlogin()}\\AppData\\Local\\Temp"
-        file = f"{path}\\speech{dt}.mp3"
-    else:
-        raise ValueError(f"'{file}' is not defined")
+        ready = True
+    elif file == "":
+        file = "speech.mp3"
+        ready = True
+    elif extension != ".mp3":
+        raise ValueError(f"{file} is in a '{extension}' format, it should be in a '.mp3' format.")
     
-    tts = gTTS(text=text, lang=lang, slow=slow)
-
-    if os.path.splitext(file)[1] == ".mp3":
+    if ready:
+        tts = gTTS(text=text, lang=lang, slow=slow, lang_check=lang_check)
         tts.save(file)
-
-        if(speak == True):
-            play(file)
-
-        if save == False:
-            os.unlink(file)
-        elif save == True:
-            pass
-        else:
-            raise ValueError(f"'{save}' is not defined")
-    else:
-        raise ValueError(f"'{file}' is not a valid mp3-file format")
