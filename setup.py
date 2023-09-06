@@ -11,7 +11,7 @@ setup(
     license = "MIT",
     url = "https://github.com/dewittethomas/text-to-speech",
     
-    description = 'A simple text to speech engine',
+    description = 'A versatile and user-friendly Python Text-to-Speech engine',
     long_description = long_description,
     long_description_content_type = "text/markdown",
 

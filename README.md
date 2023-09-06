@@ -46,7 +46,7 @@ Here are the available parameters for the `save` function:
 | Parameter     | Description                                            | Default Value   |
 |---------------|--------------------------------------------------------|-----------------|
 | `text`        | The text to be converted to speech.                    |                 |
-| `language`    | The language (IETF language tag) to use for speech synthesis. |                 |
+| `language`    | The language (IETF language tag) to use for speech synthesis. | "en"         |
 | `slow`        | Set to `True` if you want the text to be read more slowly. | `False`         |
 | `file`        | The name of the output audio file. Only accepts .mp3 format. | "speech.mp3"   |
 | `lang_check`  | Set to `True` to check the text for language errors.   | `False`         |
