@@ -1,42 +1,74 @@
-# text-to-speech
+# Text-to-Speech
 
-[![npm](https://img.shields.io/pypi/v/text-to-speech.svg)](https://pypi.org/project/text-to-speech/)
+[![PyPi Version](https://img.shields.io/pypi/v/text-to-speech.svg)](https://pypi.org/project/text-to-speech/)
+[![MIT License](https://img.shields.io/pypi/l/text-to-speech.svg)](https://github.com/dewittethomas/text-to-speech/blob/master/LICENSE)
 
-This is a simple text to speech engine with some customizable options.
+A versatile and user-friendly Python text-to-speech engine with customizable options.
 
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Basic Usage](#basic-usage)
+  - [Parameters](#parameters)
+  - [Example with Slow Speech](#example-with-slow-speech)
+- [Contributing](#contributing)
+- [License](#license)
+  
 ## Installation
 
-Run the following to install:
+You can install the `text-to-speech` module using pip:
 
-```console
+```bash
 pip install text-to-speech
 ```
 
 ## Usage
 
-### Save
+### Basic Usage
 
-```python
-save()
-```
-
-Params:
-
-```
-Text: String ? The text to be read.
-Language: String ? The language (IETF language tag) to read the text in.
-Slow: Boolean ? Reads text more slowly.
-File: String ? The file to save the text to, default is = "speech.mp3", only accepts .mp3.
-Lang_check: Boolean ? If the text has to be checked on language errors.
-```
-
-Demo:
+You can use this module to convert text to speech and save it as an audio file. Here's a basic example:
 
 ```python
 from text_to_speech import save
 
-save("Hello World", "en", file="Hello-World.mp3")
+text = "Hello, World!"
+language = "en"  # Specify the language (IETF language tag)
+output_file = "hello_world.mp3"  # Specify the output file (only accepts .mp3)
+
+save(text, language, file=output_file)
 ```
 
-# License
-[MIT](https://github.com/dewittethomas/text-to-speech/blob/master/LICENSE)
+### Parameters
+
+Here are the available parameters for the `save` function:
+
+| Parameter     | Description                                            | Default Value   |
+|---------------|--------------------------------------------------------|-----------------|
+| `text`        | The text to be converted to speech.                    |                 |
+| `language`    | The language (IETF language tag) to use for speech synthesis. |                 |
+| `slow`        | Set to `True` if you want the text to be read more slowly. | `False`         |
+| `file`        | The name of the output audio file. Only accepts .mp3 format. | "speech.mp3"   |
+| `lang_check`  | Set to `True` to check the text for language errors.   | `False`         |
+
+### Example with Slow Speech
+
+You can make the speech slower by setting the `slow` parameter to `True`:
+
+```python
+from text_to_speech import save
+
+text = "This is a slow speech example."
+language = "en"
+output_file = "slow_speech.mp3"
+
+save(text, language, slow=True, file=output_file)
+```
+
+## Contributing
+
+Contributions to this project are welcome. If you have any improvements or bug fixes, please submit a pull request.
+
+## License
+
+This project is licensed under the MIT License.
