@@ -1,9 +1,9 @@
 # Text-to-Speech
 
+A versatile and user-friendly Python Text-to-Speech engine with customizable options.
+
 [![PyPi Version](https://img.shields.io/pypi/v/text-to-speech.svg)](https://pypi.org/project/text-to-speech/)
 [![MIT License](https://img.shields.io/pypi/l/text-to-speech.svg)](https://github.com/dewittethomas/text-to-speech/blob/master/LICENSE)
-
-A versatile and user-friendly Python Text-to-Speech engine with customizable options.
 
 ## Table of Contents
 
